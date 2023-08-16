@@ -1,115 +1,40 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Link from 'next/link';
+import Layout, { siteTitle } from '../components/layout';
+import utilStyles from '../styles/utils.module.css';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Layout home>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{siteTitle}</title>
       </Head>
-
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
+      <section className={utilStyles.headingMd}>
+        <p>What the fuck did you just fucking say about me, you little bitch?
+          I'll have you know I graduated top of my class in the Navy Seals, and 
+          I've been involved in numerous secret raids on Al-Quaeda, and I have over 
+          300 confirmed kills. I am trained in gorilla warfare and I'm the top sniper 
+          in the entire US armed forces. You are nothing to me but just another target. 
+          I will wipe you the fuck out with precision the likes of which has never 
+          been seen before on this Earth, mark my fucking words. You think you can 
+          get away with saying that shit to me over the Internet? Think again, fucker. 
+          As we speak I am contacting my secret network of spies across the USA and your 
+          IP is being traced right now so you better prepare for the storm, maggot. The 
+          storm that wipes out the pathetic little thing you call your life. You're 
+          fucking dead, kid. I can be anywhere, anytime, and I can kill you in over 
+          seven hundred ways, and that's just with my bare hands. Not only am I 
+          extensively trained in unarmed combat, but I have access to the entire 
+          arsenal of the United States Marine Corps and I will use it to its full 
+          extent to wipe your miserable ass off the face of the continent, you little 
+          shit. If only you could have known what unholy retribution your little "clever" 
+          comment was about to bring down upon you, maybe you would have held your fucking 
+          tongue. But you couldn't, you didn't, and now you're paying the price, you 
+          goddamn idiot. I will shit fury all over you and you will drown in it. 
+          You're fucking dead, kiddo.</p>
+        <p>
+          Post Link here: <Link href="/posts/first-post">this page!</Link>
         </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        footer img {
-          margin-left: 0.5rem;
-        }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
-        }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
-  )
+      </section>
+    </Layout>
+  );
 }
